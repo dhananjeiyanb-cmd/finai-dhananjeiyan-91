@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FinAI Design System - Modern Financial Dashboard
+All colors MUST be HSL for theme switching support.
+*/
+
+@layer base {
+  :root {
+    /* Professional Light Theme */
+    --background: 0 0% 99%;
+    --foreground: 222 84% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 15%;
+
+    /* Professional Deep Navy */
+    --primary: 215 84% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 215 60% 35%;
+    --primary-glow: 215 70% 40%;
+
+    /* Professional Secondary */
+    --secondary: 210 40% 94%;
+    --secondary-foreground: 215 25% 25%;
+
+    --muted: 210 40% 95%;
+    --muted-foreground: 215 16% 46%;
+
+    /* Professional Teal Accent */
+    --accent: 210 40% 92%;
+    --accent-foreground: 178 90% 25%;
+    --accent-vivid: 178 90% 35%;
+
+    /* Success & Error States */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 92%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 222 84% 15%;
+
+    --radius: 0.75rem;
+    
+    /* Financial Dashboard Specific */
+    --income: 142 76% 36%;
+    --expense: 0 84% 60%;
+    --savings: 270 95% 75%;
+    --budget-good: 142 76% 36%;
+    --budget-warning: 38 92% 50%;
+    --budget-danger: 0 84% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(222 84% 15%), hsl(222 84% 25%));
+    --gradient-purple: linear-gradient(135deg, hsl(270 95% 75%), hsl(252 91% 90%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 98%));
+    
+    /* Shadows */
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-elevated: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 40px hsl(222 84% 15% / 0.15);
+
+    --sidebar-background: 215 84% 25%;
+
+    --sidebar-foreground: 0 0% 100%;
+
+    --sidebar-primary: 178 90% 35%;
+
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 215 70% 30%;
+
+    --sidebar-accent-foreground: 0 0% 100%;
+
+    --sidebar-border: 215 50% 40%;
+
+    --sidebar-ring: 178 90% 35%;
+  }
+
+  .dark {
+    --background: 215 28% 8%;
+    --foreground: 220 14% 96%;
+
+    --card: 215 28% 10%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 215 28% 10%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 222 84% 85%;
+    --primary-foreground: 215 28% 8%;
+    --primary-light: 222 84% 75%;
+    --primary-glow: 222 84% 65%;
+
+    --secondary: 215 28% 15%;
+    --secondary-foreground: 220 14% 96%;
+
+    --muted: 215 28% 15%;
+    --muted-foreground: 220 14% 70%;
+
+    --accent: 270 95% 25%;
+    --accent-foreground: 220 14% 96%;
+    --accent-vivid: 270 95% 75%;
+
+    --success: 142 76% 45%;
+    --success-foreground: 215 28% 8%;
+    --success-light: 142 76% 15%;
+
+    --warning: 38 92% 60%;
+    --warning-foreground: 215 28% 8%;
+    --warning-light: 38 92% 15%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 215 28% 8%;
+
+    --border: 215 28% 20%;
+    --input: 215 28% 20%;
+    --ring: 222 84% 85%;
+    
+    --income: 142 76% 45%;
+    --expense: 0 84% 65%;
+    --savings: 270 95% 75%;
+    --budget-good: 142 76% 45%;
+    --budget-warning: 38 92% 60%;
+    --budget-danger: 0 84% 65%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(222 84% 25%), hsl(222 84% 15%));
+    --gradient-purple: linear-gradient(135deg, hsl(270 95% 75%), hsl(270 95% 25%));
+    --gradient-card: linear-gradient(145deg, hsl(215 28% 10%), hsl(215 28% 12%));
+    
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px -1px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(222 84% 85% / 0.15);
+
+    --sidebar-background: 215 28% 8%;
+    --sidebar-foreground: 220 14% 96%;
+    --sidebar-primary: 222 84% 85%;
+    --sidebar-primary-foreground: 215 28% 8%;
+    --sidebar-accent: 215 28% 15%;
+    --sidebar-accent-foreground: 220 14% 96%;
+    --sidebar-border: 215 28% 20%;
+    --sidebar-ring: 222 84% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+  
+  /* Financial Dashboard Utilities */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-purple {
+    background: var(--gradient-purple);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
