@@ -61,6 +61,38 @@ export type Database = {
           },
         ]
       }
+      form16_history: {
+        Row: {
+          form16_data: Json
+          generated_at: string
+          id: string
+          tax_information_id: string
+          user_id: string
+        }
+        Insert: {
+          form16_data: Json
+          generated_at?: string
+          id?: string
+          tax_information_id: string
+          user_id: string
+        }
+        Update: {
+          form16_data?: Json
+          generated_at?: string
+          id?: string
+          tax_information_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "form16_history_tax_information_id_fkey"
+            columns: ["tax_information_id"]
+            isOneToOne: false
+            referencedRelation: "tax_information"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       income_sources: {
         Row: {
           amount: number | null
@@ -226,6 +258,90 @@ export type Database = {
           target_date?: string | null
           tenant_id?: string
           title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      tax_information: {
+        Row: {
+          address: string | null
+          basic_salary: number | null
+          bonus: number | null
+          created_at: string
+          employer_address: string | null
+          employer_name: string | null
+          financial_year: string
+          home_loan_interest: number | null
+          hra: number | null
+          id: string
+          lic_premium: number | null
+          medical_insurance: number | null
+          name: string
+          other_allowances: number | null
+          other_deductions: number | null
+          pan_number: string
+          professional_tax: number | null
+          provident_fund: number | null
+          special_allowance: number | null
+          tax_payable: number | null
+          tds_deducted: number | null
+          total_gross_salary: number | null
+          tuition_fees: number | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          address?: string | null
+          basic_salary?: number | null
+          bonus?: number | null
+          created_at?: string
+          employer_address?: string | null
+          employer_name?: string | null
+          financial_year: string
+          home_loan_interest?: number | null
+          hra?: number | null
+          id?: string
+          lic_premium?: number | null
+          medical_insurance?: number | null
+          name: string
+          other_allowances?: number | null
+          other_deductions?: number | null
+          pan_number: string
+          professional_tax?: number | null
+          provident_fund?: number | null
+          special_allowance?: number | null
+          tax_payable?: number | null
+          tds_deducted?: number | null
+          total_gross_salary?: number | null
+          tuition_fees?: number | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          address?: string | null
+          basic_salary?: number | null
+          bonus?: number | null
+          created_at?: string
+          employer_address?: string | null
+          employer_name?: string | null
+          financial_year?: string
+          home_loan_interest?: number | null
+          hra?: number | null
+          id?: string
+          lic_premium?: number | null
+          medical_insurance?: number | null
+          name?: string
+          other_allowances?: number | null
+          other_deductions?: number | null
+          pan_number?: string
+          professional_tax?: number | null
+          provident_fund?: number | null
+          special_allowance?: number | null
+          tax_payable?: number | null
+          tds_deducted?: number | null
+          total_gross_salary?: number | null
+          tuition_fees?: number | null
           updated_at?: string
           user_id?: string
         }
